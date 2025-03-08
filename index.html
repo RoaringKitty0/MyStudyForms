@@ -8,14 +8,13 @@
 </head>
 <body>
     <div id="header">
-        <div class="menu">+</div>
         <img src="img/logo.png" alt="">
     </div>
     <div class="hero">
         <div class="logo-image">
             <img src="img/firstpage.png" alt="">
         </div>
-        <button onclick="window.location.href='#about-us'">узнать больше о нас</button>
+        <button id="learn-more-button" onclick="scrollToAboutUs()">узнать больше о нас</button>
     </div>
     <div id="body">
         <div id="subjects">
@@ -94,7 +93,6 @@
                 <p class="city">Салехард, ЯНАО, Россия, 629008</p>
             </div>
         </div>
-
         <div id="questions">
             <div class="first-one">
                 <h1>Чем полезен этот сайт?</h1>
@@ -111,10 +109,22 @@
                 <button>+</button>
             </div>
         </div>
-
         
     </div>
-    
-    
+
+    <script>
+        function scrollToAboutUs() {
+    const aboutUsSection = document.getElementById('about-us');
+    if (aboutUsSection) {
+        window.scrollTo({
+            top: aboutUsSection.offsetTop,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+}
+
+    </script>
+       
 </body>
 </html>

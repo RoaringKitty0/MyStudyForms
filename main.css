@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-
 /* 
 font-family: "Raleway", serif - подключение Raleway
 font-family: "Jost", serif - подключение Jost
@@ -18,24 +16,50 @@ body {
 
 /* главная страница с логотипом и картинкой */
 
-body #header .menu {
-    background: #000;
-    opacity: 50%;
-    color: #f5f5f5;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    float: right;
-    position: fixed;
-    margin-top: 25px;
-    margin-left: 1350px;
+/* styles.css */
+
+.menu-button {
+    cursor: pointer; /* Делаем кнопку кликабельной */
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Зеленый фон */
+    color: white;
+    font-size: 16px;
+}
+
+.vertical-panel {
+    position: absolute; /* Позиционируем относительно окна браузера */
+    top: 100%; /* Панель будет ниже кнопки */
+    left: 0;
+    width: 200px; /* Ширина панели */
+    background-color: white;
+    border: 1px solid #ccc;
+    display: none; /* Изначально скрыта */
+}
+
+.vertical-panel a {
+    display: block; /* Чтобы ссылки были друг под другом */
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+    transition: background-color 0.3s ease; /* Плавный переход фона при наведении */
+}
+
+.vertical-panel a:hover {
+    background-color: #f9f9f9; /* Легкий серый оттенок при наведении */
+}
+
+.hidden { /* Класс для скрытия элемента */
+    display: none;
+}
+
+.menu-button:hover + .vertical-panel {
+    display: block; /* Показываем панель при наведении на кнопку */
 }
 
 body #header img {
-    width: 185px;
-    margin-left: 25px;
+    width: 165px;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 
 body .hero .logo-image img {
@@ -382,6 +406,7 @@ body #authors .people .photo .elena h3 {
     width: 400px;
     margin-left: 500px;
     margin-top: -180px;
+    
 }
 
 body #authors .people .photo .elena h4 {
@@ -584,6 +609,8 @@ body #questions .third-one button {
     float: right;
     margin-top: -55px;
 }
+
+
 
 
 
