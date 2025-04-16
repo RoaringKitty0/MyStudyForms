@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объём изображения</title>
+    <link rel="stylesheet" href="/computer_science/css/obyem_rastrovogo.css">
+</head>
+<body>
+
+    <div class="header">
+        <button class="line" onclick="history.back()">←</button>
+        <h2>информатика</h2>
+        <h1>объём растрового изображения</h1>
+        <p class="first">computer</p>
+        <h3>science co</h3>
+        <h4>mputer sc</h4>
+        
+    </div>
+
+    <div class="forms">
+        <form>
+            <label id="first">Введите глубину кодирования пикселя (в битах): <br><input id="a" class="first" type="text" placeholder="только число"></label><br>
+            <label id="second">Введите количество пикселей: <br><input id="b" class="first" type="text" placeholder="только число"></label><br>
+            <button type="button" class="button" onclick="calculateRectangleArea()">Рассчитать</button>
+        </form>
+    </div>
+    <div id="result"></div>
+    <img src="/img/tablebit.png" alt="">
+
+    <script>
+function calculateRectangleArea() {
+            const aInput = document.getElementById("a").value;
+            const bInput = document.getElementById("b").value;
+            let a = parseFloat(aInput);
+            let b = parseFloat(bInput);
+            const resultDiv = document.getElementById("result");
+
+            if (isNaN(a) || a <= 0) {
+                alert("Глубина кодирования пискеля должна быть положительным числом.");
+                return;
+            }
+            if (isNaN(b) || b <= 0) {
+                alert("Количество пикселей в изображении должно быть положительным числом.");
+                return;
+            }
+
+            const area = a * b;
+            resultDiv.textContent = `Ответ: ${area} бит`
+        }
+    </script>
+
+    <div class="answers">
+        <h1>I = i <sub>*</sub> k</h1>
+        <p class="I"><b>I - объём растрового изображения,</b> по умолчанию измеряется в битах;</p>
+        <p class="i"><b>i - глубина кодирования пикселя,</b> измеряется в битах;</p>
+        <p class="k"><b>k - количество пикселей в растровом изображении.</b></p>
+        <p class="message">*прежде чем записывать ответ, убедитесь, что параметры были введены корректно и в одной единице измерения.</p>
+    </div>
+    
+</body>
+</html>

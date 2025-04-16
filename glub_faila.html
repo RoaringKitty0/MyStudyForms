@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text file encoding depth</title>
+    <link rel="stylesheet" href="/computer_science/css/glub_faila.css">
+</head>
+<body>
+
+    <div class="header">
+        <button class="line" onclick="history.back()">←</button>
+        <img src="/img/itoolu.png" alt="">
+        <h2>информатика</h2>
+        <h1>глубина кодирования текстового файла</h1>
+    </div>
+
+    <div class="forms">
+        <form>
+            <label id="first">Введите объём файла (в битах): <br><input id="a" class="first" type="text" placeholder="только число"></label><br>
+            <label id="second">Введите количество символов: <br><input id="b" class="first" type="text" placeholder="только число"></label><br>
+            <button type="button" class="button" onclick="calculateRectangleArea()">Рассчитать</button>   
+        </form>
+    </div>
+    <div id="result"></div>
+    <img src="/img/tablebit.png" alt="">
+
+
+    <script>
+
+function calculateRectangleArea() {
+            const aInput = document.getElementById("a").value;
+            const bInput = document.getElementById("b").value;
+            let a = parseFloat(aInput);
+            let b = parseFloat(bInput);
+            const resultDiv = document.getElementById("result");
+
+            if (isNaN(a) || a <= 0) {
+                alert("ГОбъём файла должен быть положительным числом.");
+                return;
+            }
+            if (isNaN(b) || b <= 0) {
+                alert("Количество символов в тексте должно быть положительным числом.");
+                return;
+            }
+
+            const area = a / b;
+            resultDiv.textContent = `Ответ: ${area} бит`
+        }
+    </script>
+
+    <div class="answers">
+        <h1>i = I : k</h1>
+        <p class="I"><b>i - глубина кодирования символа,</b> измеряется в битах;</p>
+        <p class="i"><b>I - информационный объём текста,</b> по умолчанию измеряется в битах;</p>
+        <p class="k"><b>k - количество символов в тексте.</b></p>
+        <p class="message">*прежде чем записывать ответ, убедитесь, что параметры были введены корректно и в одной единице измерения.</p>
+    </div>
+    
+</body>
+</html>

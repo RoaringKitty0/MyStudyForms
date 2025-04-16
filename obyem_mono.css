@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    background: #f5f5f5;
+}
+
+body .line {
+    margin-top: 30px;
+    margin-left: 80px;
+    background: #f5f5f5;
+    color: #79919C;
+    font-size: 60px;
+    border-style: none;
+    transition: 0.5s;
+}
+
+body .line:hover {
+    color: #1d333d;
+}
+
+body .header h2 {
+    color: #79919C;
+    font-family: "Raleway", serif;
+    font-weight: 700px;
+    font-size: 32px;
+    filter: blur(1px);
+    margin-left: 80px;
+    margin-top: 15px;
+    margin-bottom: -40px;
+}
+
+body .header h1 {
+    font-family: "Raleway", serif;
+    font-weight: 900px;
+    color: #222427;
+    font-size: 80px;
+    width: 800px;
+    line-height: 80px;
+    margin-left: 80px;
+    margin-bottom: 200px;
+}
+
+body .header img {
+    width: 250px;
+    float: right;
+    margin-top: -480px;
+    margin-right: 80px;
+}
+
+body img {
+    width: 450px;
+    float: right;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+}
+
+
+/* первая форма */
+
+body .forms #first {
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    font-size: 35px;
+    margin-left: 80px;
+}
+
+body .forms input {
+    background: #f5f5f5;
+    border-color: #222427;
+    border-style: solid;
+    border-radius: 50px;
+    border-width: 1px;
+    height: 72px;
+    width: 559px;
+    margin-bottom: 50px;
+}
+
+body .forms .first {
+    font-family: "Raleway", serif;
+    font-weight: 400;
+    color: #222427;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 80px;
+    padding: 10px 20px;
+}
+
+body .forms .button {
+    background: #222427;
+    color: #f5f5f5;
+    width: 170px;
+    height: 70px;
+    border-radius: 50px;
+    border-style: none;
+    font-family: "Raleway", serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 510px;
+    margin-top: -5px;
+    margin-bottom: 60px;
+    transition: 0.5s;
+}
+
+body .forms .button:hover {
+    background: #79919C;
+    border-style: none;
+}
+
+
+/* вторая форма */
+
+body .forms #second {
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    font-size: 35px;
+    margin-left: 80px;
+}
+
+body .forms input {
+    background: #f5f5f5;
+    border-color: #222427;
+    border-style: solid;
+    border-radius: 50px;
+    border-width: 1px;
+    height: 72px;
+    width: 559px;
+}
+
+
+body .forms .first {
+    font-family: "Raleway", serif;
+    font-weight: 400;
+    color: #222427;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 80px;
+    padding: 10px 20px;
+}
+
+
+body .forms .button:hover {
+    background: #79919C;
+    border-style: none;
+}
+
+/* третья форма */
+
+body .forms #third {
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    font-size: 35px;
+    margin-left: 80px;
+}
+
+/* ответ */
+
+body #result {
+    margin-left: 80px;
+    padding: 25px 15px;
+    font-family: "Raleway", serif;
+    font-weight: 400;
+    color: #222427;
+    font-size: 30px;
+    border-style: solid;
+    border-color: #222427;
+    width: 600px;
+    border-radius: 50px;
+    border-width: 1px;
+    margin-bottom: 50px;
+}
+
+
+body .answers {
+    border-top-color: #222427;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+body .answers h1 {
+    font-family: "Raleway", serif;
+    font-weight: 600;
+    font-size: 60px;
+    color: #79919C;
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-bottom: 80px;
+}
+
+body .answers .I {
+    font-size: 25px;
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    color: #222427;
+    margin-left: 80px;
+}
+
+body .answers .i {
+    font-size: 25px;
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    color: #222427;
+    margin-left: 80px;
+}
+
+body .answers .f {
+    font-size: 25px;
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    color: #222427;
+    margin-left: 80px;
+}
+
+body .answers .t {
+    font-size: 25px;
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    color: #222427;
+    margin-left: 80px;
+}
+
+body .answers .message {
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: "Raleway", serif;
+    font-weight: 200;
+    color: #222427;
+    margin-left: 80px;
+    width: 800px;
+    margin-bottom: 150px;
+}
+
+body .forms .tip {
+    font-size: 20px;
+    font-family: "Raleway", serif;
+    font-weight: 400;
+    color: #a3a4a4;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+
+
+@media (max-width: 480px) {
+
+    body .line {
+        margin-top: 0px;
+        margin-left: -10%;
+        background: #f5f5f5;
+        color: #79919C;
+        font-size: 60px;
+        border-style: none;
+        transition: 0.5s;
+    }
+
+    body .header h2 {
+        color: #79919C;
+        font-family: "Raleway", serif;
+        font-weight: 700px;
+        font-size: 26px;
+        filter: blur(1px);
+        margin-left: 5%;
+        margin-top: 15px;
+        margin-bottom: -20px;
+    }
+    body .header h1 {
+        font-family: "Raleway", serif;
+        font-weight: 900px;
+        color: #222427;
+        font-size: 40px;
+        width: 300px;
+        line-height: 35px;
+        margin-left: 5%;
+        margin-bottom: 80px;
+    }
+    body .header img {
+        width: 100px;
+        float: right;
+        margin-top: 0;
+        margin-right: 5%;
+    }
+
+    /* первая форма */
+
+    body .forms #first {
+        font-family: "Raleway", serif;
+        font-weight: 300;
+        font-size: 25px;
+        margin-left: 5%;
+    }
+
+    body .forms input {
+        background: #f5f5f5;
+        border-color: #222427;
+        border-style: solid;
+        border-radius: 50px;
+        border-width: 1px;
+        height: 60px;
+        width: 320px;
+        margin-bottom: 60px;
+    }
+
+    body .forms .first {
+        font-family: "Raleway", serif;
+        font-weight: 400;
+        color: #222427;
+        font-size: 30px;
+        margin-top: 30px;
+        margin-left: 0%;
+        width: 320px;
+        padding: 10px 20px;
+    }
+        /* вторая форма */
+
+    body .forms #second {
+        font-family: "Raleway", serif;
+        font-weight: 300;
+        font-size: 25px;
+        margin-left: 0%;
+    }
+
+    body .forms input {
+        background: #f5f5f5;
+        border-color: #222427;
+        border-style: solid;
+        border-radius: 50px;
+        border-width: 1px;
+        height: 60px;
+        width: 380px;
+    }
+
+    body .forms .button {
+        background: #222427;
+        color: #f5f5f5;
+        width: 170px;
+        height: 70px;
+        border-radius: 50px;
+        border-style: none;
+        font-family: "Raleway", serif;
+        font-weight: 600;
+        font-size: 20px;
+        margin-left: 50%;
+        margin-top: -5px;
+        margin-bottom: 40px;
+        transition: 0.5s;
+    }
+    /* третья форма */
+
+    body .forms #third {
+        font-family: "Raleway", serif;
+        font-weight: 300;
+        font-size: 28px;
+        margin-left: 80px;
+    }
+
+    body #result {
+        margin-left: 0%;
+        padding: 25px 15px;
+        font-family: "Raleway", serif;
+        font-weight: 400;
+        color: #222427;
+        font-size: 30px;
+        border-style: solid;
+        border-color: #222427;
+        width: 320px;
+        border-radius: 50px;
+        border-width: 1px;
+        margin-bottom: 50px;
+    }
+
+    body img {
+        width: 320px;
+        float: center;
+        margin-top: 20px;
+        
+    }
+
+    body .answers {
+        margin-top: 50px;
+        border-top-color: #222427;
+        border-top-style: solid;
+        border-top-width: 1px;
+    }
+
+    body .answers h1 {
+        font-family: "Raleway", serif;
+        font-weight: 600;
+        font-size: 60px;
+        color: #79919C;
+        margin-top: 50px;
+        margin-left: 5%;
+        margin-bottom: 50px;
+    }
+    
+    body .answers .I {
+        font-size: 22px;
+        font-family: "Raleway", serif;
+        font-weight: 300;
+        color: #222427;
+        margin-left: 5%;
+    }
+    body .answers .i {
+        font-size: 22px;
+        font-family: "Raleway", serif;
+        font-weight: 300;
+        color: #222427;
+        margin-left: 5%;
+    }
+    body .answers .f {
+        font-size: 22px;
+        font-family: "Raleway", serif;
+        font-weight: 300;
+        color: #222427;
+        margin-left: 5%;
+    }
+    body .answers .t {
+        font-size: 22px;
+        font-family: "Raleway", serif;
+        font-weight: 300;
+        color: #222427;
+        margin-left: 5%;
+    }
+    body .answers .message {
+        margin-top: 50px;
+        font-size: 16px;
+        font-family: "Raleway", serif;
+        font-weight: 200;
+        color: #222427;
+        margin-left: 5%;
+        width: 350px;
+        margin-bottom: 60px;
+    }
+
+
+}

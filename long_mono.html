@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/computer_science/css/long_mono.css">
+</head>
+<body>
+
+    <div class="header">
+        <button class="line" onclick="history.back()">←</button>
+        <h2>информатика</h2>
+        <h1>длина звучания моноаудиофайла</h1>
+        <p class="first">audio</p>
+        <h3>mono aud</h3>
+        <h4>io file mon</h4>
+    </div>
+
+    <div class="forms">
+        <form>
+            <label id="first">Введите объём аудиофайла (в битах): <br><input id="a" class="first" type="text" placeholder="только число"></label><br>
+            <label id="second">Введите глубину кодирования звука (в битах): <br><input id="b" class="first" type="text" placeholder="только число"></label><br>
+            <label id="third">Введите частоту дискретизации (в Гц): <br><input id="c" class="first" type="text" placeholder="только число"></label><br>
+            <button type="button" class="button" onclick="calculateRectangleArea()">Рассчитать</button>   
+        </form>
+    </div>
+    <div id="result"></div>
+    <img src="/img/Table3.png" alt="">
+
+    <script>
+
+function calculateRectangleArea() {
+            const aInput = document.getElementById("a").value;
+            const bInput = document.getElementById("b").value;
+            const cInput = document.getElementById("c").value;
+            let a = parseFloat(aInput);
+            let b = parseFloat(bInput);
+            let c = parseFloat(cInput);
+            const resultDiv = document.getElementById("result");
+
+            if (isNaN(a) || a <= 0) {
+                alert("Объём аудиофайла должен быть положительным числом.");
+                return;
+            }
+            if (isNaN(b) || b <= 0) {
+                alert("Глубина кодирования звука должна быть положительным числом.");
+                return;
+            }
+            if (isNaN(c) || c <= 0) {
+                alert("Частота дискретизации должна быть положительным числом.")
+            }
+
+            const area = a / (b * c);
+            resultDiv.textContent = `Ответ: ${area} сек`
+        }
+    </script>
+
+    <div class="answers">
+        <h1>t = I : (i <sub>*</sub> f)</h1>
+        <p class="t"><b>t - время звучания аудиофайла,</b> по умолчанию измеряется в секундах;</p>
+        <p class="I"><b>I - объём аудиофайла,</b> по умолчанию вычисляется в битах;</p>
+        <p class="i"><b>i - глубина кодирования аудиофайла,</b> измеряется в битах;</p>
+        <p class="f"><b>f - частота дискретизации,</b> по умолчанию измеряется в Гц.</p>
+        <p class="message">*прежде чем записывать ответ, убедитесь, что параметры были введены корректно и в одной единице измерения.</p>
+    </div>
+    
+</body>
+</html>
