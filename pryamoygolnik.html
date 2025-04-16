@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle-formula</title>
+    <link rel="stylesheet" href="/geometry/css/pryamoygolnik.css">
+</head>
+<body>
+
+    <div class="header">
+        <button class="line" onclick="history.back()">←</button>
+        <img src="/img/gtool3.png" alt="">
+        <h2>планиметрия</h2>
+        <h1>площадь прямоугольника</h1>
+    </div>
+
+    <div class="forms">
+        <label id="in">Введите длину прямоугольника: <br><input id="a" class="first" type="text" placeholder="только число"></label><br>
+        <label id="in">Введите ширину прямоугольника: <br><input id="b" class="second" type="text" placeholder="только число"></label><br>
+        <button class="button" onclick="calculateRectangleArea()">Рассчитать</button>
+    </div>
+
+    <!-- Окошко вывода результата -->
+    <div id="result"></div>
+
+    <div class="answers">
+        <h1>S = a <sub>*</sub> b</h1>
+        <p class="S">S - площадь прямоугольника;</p>
+        <p class="a"> a - длина прямоугольника;</p>
+        <p class="b"> b - ширина прямоугольника.</p>
+        <p class="message">*Прежде чем записывать ответ, убедитесь, что параметры были введены корректно и в одной единице измерения.</p>
+    </div>
+    
+
+    <script>
+        function calculateRectangleArea() {
+    
+    const aInput = document.getElementById("a").value;
+    const bInput = document.getElementById("b").value;
+    let a = parseFloat(aInput);
+    let b = parseFloat(bInput);
+    const resultDiv = document.getElementById("result");
+
+    if (isNaN(a) || a <= 0) {
+        alert("Длина должна быть положительным числом.");
+        return;
+    }
+    if (isNaN(b) || b <= 0) {
+        alert("Ширина должна быть положительным числом.");
+        return;
+    }
+    const area = a * b;
+
+    resultDiv.textContent = `Ответ: ${area}`;
+}
+    </script>
+</body>
+</html>

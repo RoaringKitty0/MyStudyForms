@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Площадь квадрата</title>
+    <link rel="stylesheet" href="/geometry/css/squard.css">
+</head>
+<body>
+    <div class="header">
+        <button class="line" onclick="history.back()">←</button>
+        <img src="/img/gtool1.png" alt="">
+        <h2>Планиметрия</h2>
+        <h1>Площадь квадрата</h1>
+    </div>
+
+    <div class="forms">
+        <label id="in">Введите длину стороны квадрата: <br><input id="sideLength" class="first" type="text" placeholder="только число"></label><br>
+        <button class="button" onclick="calculateSquareArea()">Рассчитать</button>
+    </div>
+
+    <!-- Окошко вывода результата -->
+    <div id="result"></div>
+
+    <div class="answers">
+        <h1>S = a<sup>2</sup></h1>
+        <p class="S">S - площадь квадрата;</p>
+        <p class="a"> a - длина стороны квадрата.</p>
+        <p class="message">*Прежде чем записывать ответ, убедитесь, что параметры были введены корректно и в одной единице измерения.</p>
+    </div>
+
+    <script>
+        function calculateSquareArea() {
+            const sideLengthInput = document.getElementById("sideLength");
+            let sideLength = parseInt(sideLengthInput.value);
+
+            if (isNaN(sideLength) || sideLength <= 0) {
+                alert("Ошибка: Введенное значение должно быть положительным числом!");
+                return;
+            }
+
+            const resultDiv = document.getElementById("result");
+            const area = sideLength * sideLength;
+            resultDiv.innerText = `Ответ: ${area}`;
+        }
+    </script>
+</body>
+</html>

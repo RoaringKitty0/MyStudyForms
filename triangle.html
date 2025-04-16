@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle-formula</title>
+    <link rel="stylesheet" href="/geometry/css/triangle.css">
+</head>
+<body>
+
+    <div class="header">
+        <button class="line" onclick="history.back()">←</button>
+        <img src="/img/gtool3.png" alt="">
+        <h2>планиметрия</h2>
+        <h1>площадь треугольника</h1>
+    </div>
+
+    <div class="forms">
+        <form>
+            <label id="first">Введите длину высоты треугольника: <br><input id="a" class="first" type="text" placeholder="только число"></label><br>
+
+            <label id="second">Введите длину стороны треугольника, к которой была проведена высота: <br><input id="b" class="first" type="text" placeholder="только число"></label><br>
+            <button type="button" class="button" onclick="calculateRectangleArea()">Рассчитать</button>        
+        </form>
+    </div>
+
+    <div id="result"></div>
+
+    <div class="answers">
+        <h1>S = (h <sub>*</sub> a) : 2</h1>
+        <p class="S">S - площадь треугольника;</p>
+        <p class="a">h - длина высоты треугольника;</p>
+        <p class="b">a - длина стороны треугольника, к которой была проведена высота.</p>
+        <p class="message">*прежде чем записывать ответ, убедитесь, что параметры были введены корректно и в одной единице измерения.</p>
+    </div>
+    
+    <script>
+        function calculateRectangleArea() {
+    
+    const aInput = document.getElementById("a").value;
+    const bInput = document.getElementById("b").value;
+    let a = parseFloat(aInput);
+    let b = parseFloat(bInput);
+    const resultDiv = document.getElementById("result");
+
+    if (isNaN(a) || a <= 0) {
+        alert("Длина высоты должна быть положительным числом.");
+        return;
+    }
+    if (isNaN(b) || b <= 0) {
+        alert("Длина стороны должна быть положительным числом.");
+        return;
+    }
+    const area = (a * b) / 2;
+
+    resultDiv.textContent = `Ответ: ${area}`;
+}
+    </script>
+    
+</body>
+</html>
