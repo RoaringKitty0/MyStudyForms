@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Archimedean Power</title>
+    <link rel="stylesheet" href="/physic/css/arhimedova_sila.css">
+</head>
+<body>
+
+    <div class="header">
+        <button class="line" onclick="history.back()">←</button>
+        <img src="/img/ptoolb.png" alt="">
+        <h2>физика</h2>
+        <h1>Архимедова сила</h1>
+    </div>
+
+    <div class="forms">
+        <form>
+            <label id="first">Введите объём погруженной части тела (в м<sup>3</sup>): <br><input id="a" class="first" type="text" placeholder="только число"></label><br>
+            <label id="second">Введите плотность жидкости (в кг/м<sup>3</sup>): <br><input id="b" class="first" type="text" placeholder="только число"></label><br>
+            <button type="button" class="button" onclick="calculateRectangleArea()">Рассчитать</button>  
+        </form>
+    </div>
+    <div id="result"></div>
+    <img src="/img/tph3_vpn.png" alt="">
+
+    <script>
+function calculateRectangleArea() {
+    
+    const aInput = document.getElementById("a").value;
+    const bInput = document.getElementById("b").value;
+    let a = parseFloat(aInput);
+    let b = parseFloat(bInput);
+    const resultDiv = document.getElementById("result");
+
+    if (isNaN(a) || a <= 0) {
+        alert("Объём погруженной части тела должен быть положительным числом.");
+        return;
+    }
+    if (isNaN(b) || b <= 0) {
+        alert("Плотность жидкости должна быть положительным числом.");
+        return;
+    }
+    const area = a * b * 9.81;
+
+    resultDiv.textContent = `Ответ: ${area} Н`;
+}
+    </script>
+
+    <div class="answers">
+        <h1>F<sub>A</sub> = V<sub>п.ч.</sub> <sub>*</sub> p <sub>*</sub> g</h1>
+        <p class="Fa"><b>F<sub>A</sub> - Архимедова сила,</b> в СИ измеряется в Ньютонах;</p>
+        <p class="V"><b>V - объём погруженной в жидкость части тела,</b> в СИ измеряется в м<sup>3</sup>;</p>
+        <p class="p"><b>p - плотность жидкости,</b> в СИ измеряется в кг/м<sup>3</sup>.</p>
+        <p class="message">*прежде чем записывать ответ, убедитесь, что параметры были введены корректно и в одной единице измерения.</p>
+    </div>
+    
+</body>
+</html>

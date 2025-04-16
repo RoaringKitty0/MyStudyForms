@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid pressure</title>
+    <link rel="stylesheet" href="/physic/css/davlenie_zidkosti.css">
+</head>
+<body>
+
+    <div class="header">
+        <button class="line" onclick="history.back()">←</button>
+        <img src="/img/ptoolb.png" alt="">
+        <h2>физика</h2>
+        <h1>давление жидкостей/газов</h1>
+    </div>
+
+    <div class="forms">
+        <form>
+            <label id="first">Введите плотность жидкости (в кг/м<sup>3</sup>): <br><input id="a" class="first" type="text" placeholder="только число"></label><br>
+            <label id="second">Введите высоту столба жидкости (в м): <br><input id="b" class="first" type="text" placeholder="только число"></label><br>
+            <button type="button" class="button" onclick="calculateRectangleArea()">Рассчитать</button>   
+        </form>
+    </div>
+    <div id="result"></div>
+    <img src="/img/tph3_pph.png" alt="">
+
+    <script>
+
+function calculateRectangleArea() {
+    
+    const aInput = document.getElementById("a").value;
+    const bInput = document.getElementById("b").value;
+    let a = parseFloat(aInput);
+    let b = parseFloat(bInput);
+    const resultDiv = document.getElementById("result");
+
+    if (isNaN(a) || a <= 0) {
+        alert("Плотность жидкости быть положительным числом.");
+        return;
+    }
+    if (isNaN(b) || b <= 0) {
+        alert("Высота столба жидкости должна быть положительным числом.");
+        return;
+    }
+    const area = a * b * 9.81;
+
+    resultDiv.textContent = `Ответ: ${area} Па`;
+}
+    </script>
+
+    <div class="answers">
+        <h1>p = p <sub>*</sub> g <sub>*</sub> h </h1>
+        <p class="d"><b>p - давление жидкости,</b> в СИ измеряется в Па;</p>
+        <p class="p"><b>p - плотность жидкости,</b> в СИ измеряется в кг/м<sup>3</sup>;</p>
+        <p class="g"><b>g - ускорение свободного падения,</b> равняется примерно 9.81 м/с<sup>2</sup>;</p>
+        <p class="h"><b>h - ускоренние высота столба жидкости,</b> в СИ измеряется в м.</p>
+        <p class="message">*прежде чем записывать ответ, убедитесь, что параметры были введены корректно и в одной единице измерения.</p>
+    </div>
+    
+</body>
+</html>
