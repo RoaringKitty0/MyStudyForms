@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчёт силы Архимеда</title>
+    <link rel="stylesheet" href="/CSS/physics-7th/arhimedova_sila.css">
+</head>
+<header>
+    <button class="line" onclick="history.back()">&larr; на главную</button>
+    <h1>MSF</h1>
+    <p>MyStudyForms. Ed-Tech продукт XXI века.</p>
+</header>
+<body>
+    <div class="name">
+        <img src="/images/for-formulas-elipse.svg" alt="">
+        <h1>АРХИМЕДОВА СИЛА</h1>
+    </div>
+
+    <div class="calculator-form">
+    
+    <!-- Блок ввода объема погруженной части -->
+    <div class="input-group">
+        <label>ОБЪЁМ ПОГРУЖЕННОЙ ЧАСТИ ТЕЛА</label>
+        <div class="input-with-units">
+            <input type="number" id="volumeInput" placeholder="Введите объём" step="0.001">
+            <select id="volumeUnit">
+                <option value="m3">м³</option>
+                <option value="cm3">см³</option>
+                <option value="l">л</option>
+                <option value="ml">мл</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Блок ввода плотности жидкости -->
+    <div class="input-group">
+        <label>ПЛОТНОСТЬ ЖИДКОСТИ</label>
+        <div class="input-with-units">
+            <input type="number" id="densityInput" placeholder="Введите плотность" step="0.001">
+            <select id="densityUnit">
+                <option value="kg_m3">кг/м³</option>
+                <option value="g_cm3">г/см³</option>
+                <option value="g_l">г/л</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Блок ускорения свободного падения -->
+    <div class="input-group">
+        <label>УСКОРЕНИЕ СВОБОДНОГО ПАДЕНИЯ</label>
+        <div class="input-with-units">
+            <input type="number" id="gravityInput" placeholder="10" value="10" step="0.1" readonly>
+            <select id="gravityUnit">
+                <option value="m_s2">м/с²</option>
+            </select>
+        </div>
+        <p style="font-size: 12px; color: #888; margin-top: 5px;">*стандартное значение для Земли</p>
+    </div>
+
+    <button onclick="calculateArchimedesForce()" class="calculate-btn">рассчитать</button>
+
+    <!-- Блок результата -->
+    <div class="result-group">
+        <label>АРХИМЕДОВА СИЛА</label>
+        <div class="result-with-units">
+            <input type="text" id="forceResult" readonly placeholder="Результат">
+            <select id="forceUnit">
+                <option value="N">Н (Ньютон)</option>
+                <option value="kN">кН</option>
+            </select>
+        </div>
+        <p>Пожалуйста, убедитесь, что все введённые данные и выбранные единицы измерения корректны для Вашей задачи.</p>
+    </div>
+</div>
+
+<div class="formula-explanation">
+    <p class="formula">Fа = V × ρ × g</p>
+    <ul>
+        <li><strong>Fа</strong> — архимедова сила</li>
+        <li><strong>V</strong> — объём погруженной части тела</li>
+        <li><strong>ρ</strong> — плотность жидкости</li>
+        <li><strong>g</strong> — ускорение свободного падения (≈10 м/с²)</li>
+    </ul>
+</div>
+
+<script src="/JS/physics-7th/arhimedova_sila.js"></script>
+</body>
+</html>

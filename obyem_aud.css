@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+/* СБРОС СТИЛЕЙ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ОСНОВНЫЕ СТИЛИ */
+body {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    background: #0a0a0b;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 174, 129, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(0, 174, 129, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(0, 174, 129, 0.08) 0%, transparent 50%);
+    z-index: -1;
+}
+
+/* ШАПКА */
+header {
+    padding: 30px 0;
+    border-bottom: 1px solid #1e1e1e;
+    background: rgba(10, 10, 11, 0.95);
+    backdrop-filter: blur(20px);
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00AE81, transparent);
+}
+
+header button {
+    background: transparent;
+    border: 2px solid #00AE81;
+    color: #ffffff;
+    border-radius: 15px;
+    width: 280px;
+    height: 70px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Unbounded', sans-serif;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin: 0 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+header button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 174, 129, 0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+header button:hover::before {
+    left: 100%;
+}
+
+header button:hover {
+    background: #00AE81;
+    color: #0a0a0b;
+    transform: translateY(-3px);
+    box-shadow: 
+        0 10px 30px rgba(0, 174, 129, 0.4),
+        0 0 0 1px rgba(0, 174, 129, 0.3);
+}
+
+header h1 {
+    color: #00AE81;
+    font-weight: 700;
+    font-size: 48px;
+    margin: 0 50px;
+    float: right;
+    text-shadow: 0 0 30px rgba(0, 174, 129, 0.5);
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #888;
+    font-weight: 200;
+    font-size: 8px;
+    margin-top: -5px;
+    margin-right: 5px;
+    float: right;
+    clear: both;
+    letter-spacing: 1px;
+}
+
+/* ЗАГОЛОВОК СТРАНИЦЫ */
+.name {
+    padding: 80px 0 60px 0;
+    text-align: center;
+    position: relative;
+}
+
+.name::before {
+    content: '🎵';
+    font-size: 140px;
+    opacity: 0.08;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.name h1 {
+    font-size: 64px;
+    font-weight: 300;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 20px rgba(0, 174, 129, 0.3);
+    letter-spacing: 2px;
+}
+
+.name h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00AE81, transparent);
+    border-radius: 2px;
+}
+
+/* ФОРМА КАЛЬКУЛЯТОРА */
+.calculator-form {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    background: rgba(18, 20, 19, 0.8);
+    border: 1px solid #2a2a2d;
+    border-radius: 20px;
+    padding: 50px;
+    backdrop-filter: blur(15px);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.calculator-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00AE81, transparent);
+    border-radius: 20px 20px 0 0;
+}
+
+/* ГРУППЫ ВВОДА */
+.input-group, .result-group {
+    margin: 35px 0;
+}
+
+.input-group label, .result-group label {
+    display: block;
+    margin-bottom: 18px;
+    font-weight: 300;
+    color: #e8e8e8;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.input-with-units, .result-with-units {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* ПОЛЯ ВВОДА */
+#depthInput, #frequencyInput, #timeInput, #volumeResult {
+    flex: 1;
+    padding: 18px 24px;
+    border: 2px solid #36363a;
+    background: rgba(25, 28, 26, 0.9);
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    min-width: 200px;
+}
+
+#depthInput:focus, #frequencyInput:focus, #timeInput:focus {
+    border-color: #00AE81;
+    background: rgba(30, 35, 32, 0.95);
+    outline: none;
+    box-shadow: 
+        0 0 0 4px rgba(0, 174, 129, 0.15),
+        inset 0 0 20px rgba(0, 174, 129, 0.05);
+    transform: translateY(-2px);
+}
+
+#depthInput::placeholder, #frequencyInput::placeholder, #timeInput::placeholder {
+    color: #666;
+}
+
+#volumeResult {
+    background: rgba(20, 23, 21, 0.9);
+    color: #a0a0a0;
+    border-color: #00AE81;
+    cursor: not-allowed;
+}
+
+/* ВЫПАДАЮЩИЕ СПИСКИ */
+.input-with-units select, .result-with-units select {
+    padding: 18px 20px;
+    border: 2px solid #363a38;
+    background: rgba(30, 35, 32, 0.9);
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+}
+
+.input-with-units select:hover, .result-with-units select:hover {
+    border-color: #00AE81;
+    background: rgba(35, 40, 37, 0.95);
+    transform: translateY(-1px);
+}
+
+.input-with-units select:focus, .result-with-units select:focus {
+    border-color: #00AE81;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 174, 129, 0.2);
+}
+
+/* СЕЛЕКТ НА ВСЮ ШИРИНУ */
+.full-width-select {
+    width: 100%;
+    min-width: auto;
+}
+
+/* КНОПКА РАСЧЕТА */
+.calculate-btn {
+    width: 100%;
+    padding: 22px;
+    background: linear-gradient(135deg, #00AE81 0%, #00C991 100%);
+    border: none;
+    border-radius: 15px;
+    color: #ffffff;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    overflow: hidden;
+    margin: 40px 0 20px 0;
+}
+
+.calculate-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.calculate-btn:hover::before {
+    left: 100%;
+}
+
+.calculate-btn:hover {
+    background: linear-gradient(135deg, #00C991 0%, #00E5A0 100%);
+    transform: translateY(-4px);
+    box-shadow: 
+        0 15px 40px rgba(0, 174, 129, 0.4),
+        0 0 0 1px rgba(0, 174, 129, 0.2);
+}
+
+.calculate-btn:active {
+    transform: translateY(-2px);
+}
+
+/* ОПИСАНИЕ ФОРМУЛЫ */
+.formula-explanation {
+    background: rgba(18, 20, 19, 0.8);
+    border: 1px solid #2a2a2d;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 0 auto 80px auto;
+    width: 70%;
+    max-width: 800px;
+    backdrop-filter: blur(15px);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.formula-explanation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00AE81, transparent);
+    border-radius: 20px 20px 0 0;
+}
+
+/* ФОРМУЛА */
+.formula {
+    font-size: 72px;
+    font-weight: 300;
+    text-align: center;
+    color: #00AE81;
+    margin: 40px 0 60px 0;
+    padding: 50px;
+    border: 2px solid #2a2a2d;
+    border-radius: 20px;
+    background: rgba(25, 28, 26, 0.6);
+    text-shadow: 0 0 20px rgba(0, 174, 129, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.formula::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 174, 129, 0.03) 50%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+}
+
+/* СПИСОК ОПИСАНИЯ */
+.formula-explanation ul {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.formula-explanation li {
+    margin: 20px 0;
+    color: #b0b0b0;
+    font-weight: 300;
+    font-size: 16px;
+    padding-left: 35px;
+    position: relative;
+    line-height: 1.8;
+}
+
+.formula-explanation li::before {
+    content: '♪';
+    color: #00AE81;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.formula-explanation strong {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+/* ИНФОРМАЦИОННАЯ ПОДСКАЗКА */
+.info-tip {
+    background: rgba(0, 174, 129, 0.1);
+    border: 1px solid rgba(0, 174, 129, 0.3);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    color: #80D4B6;
+    font-size: 14px;
+    line-height: 1.7;
+    position: relative;
+}
+
+.info-tip::before {
+    content: '💡';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+}
+
+.info-tip strong {
+    color: #00AE81;
+    font-weight: 500;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 1024px) {
+    .calculator-form,
+    .formula-explanation {
+        width: 85%;
+        padding: 40px;
+    }
+    
+    .name h1 {
+        font-size: 56px;
+    }
+    
+    .formula {
+        font-size: 60px;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+    
+    header button {
+        margin: 10px auto;
+        float: none;
+        display: block;
+    }
+    
+    header h1 {
+        float: none;
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    header p {
+        float: none;
+        margin: 10px auto;
+        text-align: center;
+    }
+    
+    .calculator-form,
+    .formula-explanation {
+        width: 95%;
+        padding: 30px;
+    }
+    
+    .input-with-units,
+    .result-with-units {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #depthInput,
+    #frequencyInput,
+    #timeInput,
+    #volumeResult,
+    .input-with-units select,
+    .result-with-units select {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .name h1 {
+        font-size: 48px;
+    }
+    
+    .formula {
+        font-size: 48px;
+        padding: 30px 20px;
+    }
+    
+    .name::before {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name h1 {
+        font-size: 36px;
+    }
+    
+    .formula {
+        font-size: 36px;
+    }
+    
+    .calculator-form,
+    .formula-explanation {
+        padding: 25px 20px;
+    }
+    
+    header button {
+        width: 250px;
+        height: 60px;
+        font-size: 16px;
+    }
+}
+
+/* АНИМАЦИИ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.calculator-form,
+.formula-explanation {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.input-group,
+.result-group {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* СТИЛИ ДЛЯ СОСТОЯНИЙ ОШИБОК */
+.input-group.error #depthInput,
+.input-group.error #frequencyInput,
+.input-group.error #timeInput {
+    border-color: #ff6b6b;
+    background: rgba(42, 26, 26, 0.9);
+    animation: shake 0.5s ease-in-out;
+}
+
+.result-group.error #volumeResult {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* ПОДСВЕТКА АКТИВНЫХ ПОЛЕЙ */
+.input-with-units:focus-within {
+    position: relative;
+}
+
+.input-with-units:focus-within::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00AE81, #00C991, #00AE81);
+    border-radius: 2px;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* ДОПОЛНИТЕЛЬНЫЕ ЭФФЕКТЫ */
+.calculate-btn:disabled {
+    background: #36363a;
+    color: #666;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.calculate-btn:disabled:hover {
+    background: #36363a;
+    transform: none;
+    box-shadow: none;
+}
+
+.calculate-btn:disabled::before {
+    display: none;
+}
+
+/* СКРОЛЛБАР */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00AE81;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00C991;
+}
