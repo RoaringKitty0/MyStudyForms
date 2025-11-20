@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Unbounded:wght@200..900&display=swap');
+
+/* БЕЗ ЛИШНИХ ОТСТУПОВ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    background: #151516;
+    color: #fff;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) 
+            env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ШАПКА СТРАНИЦЫ */
+header {
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+header button {
+    background: #151516;
+    border: #00AE81 1px solid;
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 260px;
+    height: 54px;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Unbounded', sans-serif;
+    transition: all 500ms ease;
+    margin: 20px auto;
+    cursor: pointer;
+    display: block;
+    min-height: 44px;
+}
+
+header button:hover {
+    border: #151516 1px solid;
+    background: #00AE81;
+    color: #151516;
+}
+
+header h1 {
+    color: #00AE81;
+    font-weight: 600;
+    margin: 20px 0;
+    font-size: 32px;
+    text-align: center;
+    float: none;
+}
+
+header p {
+    display: none;
+}
+
+/* НАЗВАНИЕ СТРАНИЦЫ */
+body .name {
+    padding-bottom: 50px;
+    padding: 0 20px;
+}
+
+body .name img {
+    margin-left: 0;
+    margin-top: 30px;
+    height: 60px;
+}
+
+body .name h1 {
+    font-size: 32px;
+    font-weight: 200;
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+/* ВВОД ЕДИНИЦ ИЗМЕРЕНИЯ */
+.calculator-form {
+    width: 100%;
+    background: #151516;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+.input-group, .result-group {
+    margin: 25px 0;
+    color: #fff;
+    font-weight: 200;
+}
+
+.result-group p {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.input-group label, .result-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.input-with-units, .result-with-units {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+}
+
+/* Стили для полей ввода массы и плотности */
+#massInput, #densityInput {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 200;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #00AE81;
+    background: #191919;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+    color: #fff;
+    min-height: 44px;
+}
+
+#massInput:focus, #densityInput:focus {
+    border-color: #027053;
+    outline: none;
+}
+
+/* Стиль для поля результата объема */
+#volumeResult {
+    background: #191919;
+    color: #838383;
+    font-weight: 200;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #00AE81;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Unbounded', sans-serif;
+    min-height: 44px;
+}
+
+.input-with-units select, .result-with-units select {
+    padding: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+    width: 100%;
+    min-height: 44px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 200;
+}
+
+/* Кнопка расчета объема */
+.calculate-btn {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 200;
+    background: #00AE81;
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 20px 0;
+    width: 100%;
+    min-height: 44px;
+}
+
+.calculate-btn:hover {
+    background: #151516;
+    border: #00AE81 1px solid;
+}
+
+.formula-explanation {
+    background: #151516;
+    padding: 30px 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+/* Формула объема */
+.formula {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    color: #00AE81;
+    margin: 30px 0;
+    border: #838383 1px solid;
+    padding: 25px 15px;
+    border-radius: 20px;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+.formula-explanation ul {
+    margin: 20px 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.formula-explanation li {
+    margin: 15px 0;
+    color: #838383;
+    font-weight: 200;
+    font-size: 16px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.formula-explanation li:before {
+    content: "•";
+    color: #00AE81;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Специфичные стили для выпадающих списков объема */
+#volumeUnit, #massUnit, #densityUnit {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 200;
+}
+
+/* МОБИЛЬНЫЕ УСТРОЙСТВА (до 768px) */
+@media (max-width: 768px) {
+    header {
+        margin-bottom: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    header button {
+        width: 100%;
+        max-width: 280px;
+        height: 56px;
+        font-size: 16px;
+        margin: 20px auto;
+        display: block;
+        float: none;
+    }
+    
+    header h1 {
+        float: none;
+        font-size: 32px;
+        margin: 10px auto;
+        text-align: center;
+    }
+    
+    header p {
+        float: none;
+        font-size: 6px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    body .name {
+        padding: 40px 20px 60px;
+        text-align: center;
+    }
+    
+    body .name img {
+        margin: 0 auto 20px;
+        display: block;
+        float: none;
+        height: 70px;
+    }
+    
+    body .name h1 {
+        font-size: 36px;
+        margin: 0 auto;
+        margin-top: -80px;
+        float: none;
+        text-align: center;
+    }
+    
+    .calculator-form {
+        width: 90%;
+        padding: 30px 20px;
+        margin: 0 auto;
+    }
+    
+    .input-group, .result-group {
+        margin: 25px 0;
+    }
+    
+    .result-group p {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .input-with-units, .result-with-units {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .input-with-units input, 
+    .result-with-units input,
+    .input-with-units select, 
+    .result-with-units select {
+        width: 100%;
+        padding: 16px;
+        font-size: 16px;
+    }
+    
+    .calculate-btn {
+        width: 100%;
+        padding: 18px;
+        font-size: 16px;
+        margin: 25px 0;
+    }
+    
+    .formula-explanation {
+        padding: 30px 20px;
+        margin: 40px auto;
+        width: 90%;
+    }
+    
+    .formula {
+        font-size: 42px;
+        padding: 25px 20px;
+        margin: 30px 0 40px;
+    }
+    
+    .formula-explanation li {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+}
+
+/* ОЧЕНЬ МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px) */
+@media (max-width: 480px) {
+    body .name h1 {
+        font-size: 32px;
+    }
+    
+    .formula {
+        font-size: 36px;
+        padding: 20px 15px;
+    }
+    
+    .formula-explanation li {
+        font-size: 16px;
+    }
+    
+    header button {
+        height: 52px;
+        font-size: 15px;
+    }
+}
+
+/* ЛАНДШАФТНАЯ ОРИЕНТАЦИЯ НА МОБИЛЬНЫХ */
+@media (max-width: 768px) and (orientation: landscape) {
+    header {
+        padding: 15px 20px;
+        margin-bottom: 20px;
+    }
+    
+    body .name {
+        padding: 30px 20px 40px;
+    }
+    
+    .calculator-form {
+        margin: 20px auto;
+    }
+}
+
+/* Планшеты */
+@media (min-width: 768px) {
+    header {
+        padding: 0 40px;
+    }
+    
+    header button {
+        width: 260px;
+        height: 62px;
+        font-size: 20px;
+        margin: 50px 50px;
+        float: left;
+    }
+    
+    header h1 {
+        float: right;
+        font-size: 50px;
+        margin: 50px 50px;
+        text-align: right;
+    }
+    
+    body .name {
+        padding: 0 40px 100px;
+    }
+    
+    body .name img {
+        margin-left: 40px;
+        margin-top: 50px;
+        height: 95px;
+    }
+    
+    body .name h1 {
+        font-size: 55px;
+        margin-left: 40px;
+        margin-top: -90px;
+    }
+    
+    .calculator-form {
+        width: 80%;
+        padding: 40px;
+    }
+    
+    .input-with-units, .result-with-units {
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    #massInput, #densityInput, #volumeResult,
+    .input-with-units select, .result-with-units select {
+        width: auto;
+        flex: 1;
+    }
+    
+    .formula {
+        font-size: 50px;
+        padding: 30px;
+    }
+    
+    .formula-explanation li {
+        font-size: 20px;
+    }
+    
+    .result-group p {
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    header p {
+        display: block;
+        float: right;
+        font-weight: 100;
+        font-size: 6px;
+        margin-top: 110px;
+        margin-right: -195px;
+    }
+}
+
+/* Десктоп */
+@media (min-width: 1024px) {
+    .calculator-form {
+        width: 60%;
+        padding-left: 40px;
+    }
+    
+    .result-group p {
+        width: 750px;
+    }
+    
+    .formula {
+        font-size: 70px;
+    }
+}
+
+/* Предотвращение zoom в iOS */
+@media (max-width: 768px) {
+    #massInput, #densityInput, #volumeResult,
+    .input-with-units select, .result-with-units select {
+        font-size: 16px !important;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.calculator-form,
+.formula-explanation {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Стили для состояний ошибок */
+.input-group.error #massInput,
+.input-group.error #densityInput {
+    border-color: #ff4444;
+    background: #2a1a1a;
+}
+
+.result-group.error #volumeResult {
+    border-color: #ff4444;
+    color: #ff4444;
+}

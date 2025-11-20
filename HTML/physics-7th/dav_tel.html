@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчёт давления твёрдых тел</title>
+    <link rel="stylesheet" href="/CSS/physics-7th/dav_tel.css">
+</head>
+<header>
+    <button class="line" onclick="history.back()">&larr; на главную</button>
+    <h1>MSF</h1>
+    <p>MyStudyForms. Ed-Tech продукт XXI века.</p>
+</header>
+<body>
+    <div class="name">
+        <h1>ДАВЛЕНИЕ ТВЁРДЫХ ТЕЛ</h1>
+    </div>
+
+    <div class="calculator-form">
+    
+    <!-- Блок ввода силы -->
+    <div class="input-group">
+        <label>СИЛА ДАВЛЕНИЯ</label>
+        <div class="input-with-units">
+            <input type="number" id="forceInput" placeholder="Введите силу" step="0.001">
+            <select id="forceUnit">
+                <option value="N">Н (Ньютон)</option>
+                <option value="kN">кН</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Блок ввода площади -->
+    <div class="input-group">
+        <label>ПЛОЩАДЬ ОПОРЫ</label>
+        <div class="input-with-units">
+            <input type="number" id="areaInput" placeholder="Введите площадь" step="0.001">
+            <select id="areaUnit">
+                <option value="m2">м²</option>
+                <option value="cm2">см²</option>
+                <option value="mm2">мм²</option>
+            </select>
+        </div>
+    </div>
+
+    <button onclick="calculateSolidPressure()" class="calculate-btn">рассчитать</button>
+
+    <!-- Блок результата -->
+    <div class="result-group">
+        <label>ДАВЛЕНИЕ</label>
+        <div class="result-with-units">
+            <input type="text" id="pressureResult" readonly placeholder="Результат">
+            <select id="pressureUnit">
+                <option value="Pa">Па (Паскаль)</option>
+                <option value="kPa">кПа</option>
+                <option value="MPa">МПа</option>
+            </select>
+        </div>
+        <p>Пожалуйста, убедитесь, что все введённые данные и выбранные единицы измерения корректны для Вашей задачи.</p>
+    </div>
+</div>
+
+<div class="formula-explanation">
+    <p class="formula">p = F ÷ S</p>
+    <ul>
+        <li><strong>p</strong> — давление</li>
+        <li><strong>F</strong> — сила давления</li>
+        <li><strong>S</strong> — площадь опоры</li>
+    </ul>
+</div>
+
+<script src="/JS/physics-7th/dav_tel.js"></script>
+</body>
+</html>

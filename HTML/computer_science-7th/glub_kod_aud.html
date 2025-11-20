@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глубина кодирования аудио</title>
+    <link rel="stylesheet" href="/CSS/computer_science-7th/glub_kod_aud.css">
+</head>
+<header>
+    <button class="line" onclick="history.back()">&larr; на главную</button>
+    <h1>MSF</h1>
+    <p>MyStudyForms. Ed-Tech продукт XXI века.</p>
+</header>
+<body>
+    <div class="name">
+        <h1>ГЛУБИНА КОДИРОВАНИЯ АУДИО</h1>
+    </div>
+
+    <div class="calculator-form">
+    
+    <!-- Блок ввода объёма файла -->
+    <div class="input-group">
+        <label>ОБЪЁМ ФАЙЛА (I)</label>
+        <div class="input-with-units">
+            <input type="number" id="volumeInput" placeholder="Введите объём файла" step="0.001">
+            <select id="volumeUnit">
+                <option value="bit">бит</option>
+                <option value="byte">байт</option>
+                <option value="kb">Кбайт</option>
+                <option value="mb">Мбайт</option>
+                <option value="gb">Гбайт</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Блок ввода частоты дискретизации -->
+    <div class="input-group">
+        <label>ЧАСТОТА ДИСКРЕТИЗАЦИИ (f)</label>
+        <div class="input-with-units">
+            <input type="number" id="frequencyInput" placeholder="Введите частоту дискретизации" step="1">
+            <select id="frequencyUnit">
+                <option value="hz">Гц</option>
+                <option value="khz">кГц</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Блок ввода времени -->
+    <div class="input-group">
+        <label>ВРЕМЯ ЗАПИСИ (t)</label>
+        <div class="input-with-units">
+            <input type="number" id="timeInput" placeholder="Введите время записи" step="0.1">
+            <select id="timeUnit">
+                <option value="sec">секунды</option>
+                <option value="min">минуты</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Блок выбора каналов -->
+    <div class="input-group">
+        <label>КОЛИЧЕСТВО КАНАЛОВ</label>
+        <div class="input-with-units">
+            <select id="channelsInput" class="full-width-select">
+                <option value="1">Моно (1 канал)</option>
+                <option value="2" selected>Стерео (2 канала)</option>
+            </select>
+        </div>
+    </div>
+
+    <button onclick="calculateAudioDepth()" class="calculate-btn">рассчитать</button>
+
+    <!-- Блок результата -->
+    <div class="result-group">
+        <label>ГЛУБИНА КОДИРОВАНИЯ</label>
+        <div class="result-with-units">
+            <input type="text" id="depthResult" readonly placeholder="Результат">
+            <select id="depthUnit">
+                <option value="bit">бит</option>
+                <option value="byte">байт</option>
+            </select>
+        </div>
+        <p>Пожалуйста, убедитесь, что все введённые данные и выбранные единицы измерения корректны для Вашей задачи.</p>
+    </div>
+</div>
+
+<div class="formula-explanation">
+    <p class="formula">i = I ÷ (f × t × k)</p>
+    <ul>
+        <li><strong>i</strong> — глубина кодирования (бит на отсчёт)</li>
+        <li><strong>I</strong> — информационный объём файла</li>
+        <li><strong>f</strong> — частота дискретизации (Гц)</li>
+        <li><strong>t</strong> — время записи (секунды)</li>
+        <li><strong>k</strong> — количество каналов (1 для моно, 2 для стерео)</li>
+    </ul>
+    <div class="info-tip">
+        💡 <strong>Справка:</strong> 1 байт = 8 бит, 1 Кбайт = 1024 байта, 1 кГц = 1000 Гц
+    </div>
+</div>
+
+<script src="/JS/computer_science-7th/glub_kod_aud.js"></script>
+</body>
+</html>

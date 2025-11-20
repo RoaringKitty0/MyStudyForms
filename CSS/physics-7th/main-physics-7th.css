@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Unbounded:wght@200..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    background: #151516;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ШАПКА СТРАНИЦЫ */
+
+header button {
+    background: #151516;
+    border: #00AE81 1px solid;
+    color: #fff;
+    border-radius: 10px;
+    width: 260px;
+    height: 62px;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Unbounded', sans-serif;
+    transition: all 500ms ease;
+    margin: 50px 50px;
+    cursor: pointer;
+}
+
+header button:hover {
+    border: #151516 1px solid;
+    background: #00AE81;
+    color: #151516
+}
+
+header .search {
+    background: #D5D5D5;
+    width: 609px;
+    height: 59px;
+    border-radius: 39px;
+    color: #151516;
+    font-size: 20px;
+    font-weight: 200;
+    float: right;
+    margin-top: 50px;
+    margin-right: 400px;
+
+}
+
+header .search p {
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+header .search img {
+    float: right;
+    margin-top: -28px;
+    margin-right: 20px;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 50px;
+    color: #00AE81;
+    float: right;
+    margin-right: 35px;
+    margin-top: -120px;
+}
+header .logo {
+    font-weight: 100;
+    font-size: 6px;
+    float: right;
+    margin-right: 30px;
+    margin-top: -60px;
+}
+
+/* ОПИСАНИЕ ПРЕДМЕТА И ЗАГОЛОВОК !!!!! */
+
+body .naming {
+    margin-top: 100px;
+    padding-bottom: 300px;
+}
+
+body .naming img {
+    float: left;
+    margin-left: 40px;
+    width: 400px;
+}
+
+body .naming h1 {
+    font-size: 65px;
+    font-weight: 300px;
+    float: left;
+    margin-top: 30px;
+    margin-left: -390px;
+}
+
+body .naming p {
+    float: right;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 300;
+    width: 850px;
+    margin-right: 70px;
+    color: #e3e2e2;
+    letter-spacing: 10%;
+}
+
+/* НАЧИНАЕМ ОПИСЫВАТЬ КНОПОЧКИ С ФОРМУЛАМИ !!!!!!!! */
+
+body .forms {
+    padding-bottom: 1000px;
+
+}
+
+/*  МАССА ТЕЛО !!! */
+
+body .forms .one {
+    font-family: 'Unbounded', sans-serif;
+    width: 210px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: 1px #fff solid;
+    background: #151516;
+    border-radius: 50px;
+    color: #fff;
+    float: left;
+    margin-left: 70px;
+    margin-top: 20px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+body .forms .one:hover {
+    background: #fff;
+    color: #151516;
+}
+
+/*  ОЬЪЁМ ТЕЛО !!! */
+
+body .forms .two {
+    font-family: 'Unbounded', sans-serif;
+    width: 210px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: none;
+    background: #00AE81;
+    border-radius: 50px;
+    color: #fff;
+    float: left;
+    margin-left: 70px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+body .forms .two:hover {
+    background: #151516;
+    color: #00AE81;
+    border: 1px #00AE81 solid;
+}
+
+/*  ПЛОТНОСТЬ ТЕЛО !!! */
+
+body .forms .three {
+    font-family: 'Unbounded', sans-serif;
+    width: 290px;
+    height: 90px;
+    font-size: 25px;
+    font-weight: 700;
+    border: 1px solid #00AE81;
+    background: #151516;
+    border-radius: 50px;
+    color: #fff;
+    float: left;
+    margin-left: 70px;
+    margin-top: 40px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+body .forms .three:hover {
+    background: #00AE81;
+    color: #151516;
+    border: 1px #00AE81 solid;
+}
+
+/*  СИЛА ТЯЖЕСТИ !!! */
+
+body .forms .four {
+    font-family: 'Unbounded', sans-serif;
+    width: 350px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: 1px solid #fff;
+    background: #151516;
+    border-radius: 50px;
+    color: #fff;
+    float: left;
+    margin-left: -800px;
+    margin-top: 170px;
+    transition: all 500ms ease;
+    cursor: pointer;
+    float: left;
+}
+
+body .forms .four:hover {
+    background: #151516;
+    color: #00AE81;
+    border: 1px #00AE81 solid;
+}
+
+/* АРХИМЕДОВА СИЛА!!!!!! */
+
+body .forms .five {
+    font-family: 'Unbounded', sans-serif;
+    width: 400px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: 1px solid #00AE81;
+    background: #151516;
+    border-radius: 50px;
+    color: #00AE81;
+    float: left;
+    margin-left: -650px;
+    margin-top: 320px;
+    transition: all 500ms ease;
+    cursor: pointer;
+    float: left;
+}
+
+body .forms .five:hover {
+    background: #151516;
+    color: #fff;
+    border: 1px #fff solid;
+}
+
+/* ВЕС !!!!!! */
+
+body .forms .six {
+    font-family: 'Unbounded', sans-serif;
+    width: 210px;
+    height: 90px;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    background: #fff;
+    border-radius: 50px;
+    color: #151516;
+    float: left;
+    margin-left: 30px;
+    margin-top: 140px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+body .forms .six:hover {
+    background: #151516;
+    color: #fff;
+    border: 1px #fff solid;
+}
+
+/* ДАВЛЕНИЕ ЖИДКОСТЕЙ / ГАЗОВ !!!!!! */
+
+body .forms .seven {
+    font-family: 'Unbounded', sans-serif;
+    width: 590px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: 1px solid #fff;
+    background: #151516;
+    border-radius: 50px;
+    color: #fff;
+    float: left;
+    margin-top: 120px;
+    margin-left: 80px;
+    transition: all 500ms ease;
+    cursor: pointer;
+    float: left;
+}
+
+body .forms .seven:hover {
+    background: #fff;
+    color: #151516;
+    border: 1px #fff solid;
+}
+
+/*  ДАВЛЕНИЕ ТВЕРДЫХ ТЕЛ !!! */
+
+body .forms .eight {
+    font-family: 'Unbounded', sans-serif;
+    width: 520px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: 1px solid #fff;
+    background: #fff;
+    border-radius: 50px;
+    color: #151516;
+    float: left;
+    margin-left: 70px;
+    margin-top: 40px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+body .forms .eight:hover {
+    background: #151516;
+    color: #fff;
+    border: 1px #fff solid;
+}
+
+/*  РАБОТА !!! */
+
+body .forms .nine {
+    font-family: 'Unbounded', sans-serif;
+    width: 230px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: 1px solid #00AE81;
+    background: #151516;
+    border-radius: 50px;
+    color: #fff;
+    float: left;
+    margin-left: -480px;
+    margin-top: 180px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+body .forms .nine:hover {
+    background: #151516;
+    color: #00AE81;
+    border: 1px #fff solid;
+}
+
+/*  МОЩНОСТЬ !!! */
+
+body .forms .ten {
+    font-family: 'Unbounded', sans-serif;
+    width: 270px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: 1px solid #fff;
+    background: #151516;
+    border-radius: 50px;
+    color: #fff;
+    float: left;
+    margin-left: -150px;
+    margin-top: 180px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+body .forms .ten:hover {
+    background: #fff;
+    color: #151516;
+    border: 1px #fff solid;
+}
+
+/*  КОЭФФИЦИЕНТ ПОЛЕЗНОГО МЕХАНИЗМА !!! */
+
+body .forms .eleven {
+    font-family: 'Unbounded', sans-serif;
+    width: 750px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: 1px solid #fff;
+    background: #151516;
+    border-radius: 50px;
+    color: #fff;
+    float: left;
+    margin-left: -550px;
+    margin-top: 320px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+body .forms .eleven:hover {
+    background: #151516;
+    color: #00AE81;
+    border: 1px #00AE81 solid;
+}
+
+/*  ПОТЕНЦИАЛЬНАЯ ЭНЕРГИЯ !!! */
+
+body .forms .twelve {
+    font-family: 'Unbounded', sans-serif;
+    width: 520px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: 1px solid #00AE81;
+    background: #00AE81;
+    border-radius: 50px;
+    color: #151516;
+    float: left;
+    margin-left: -100px;
+    margin-top: 40px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+body .forms .twelve:hover {
+    background: #151516;
+    color: #00AE81;
+    border: 1px #00AE81 solid;
+}
+
+/*  КИНЕТИЧЕСКАЯ ЭНЕРГИЯ !!! */
+
+body .forms .thirteen {
+    font-family: 'Unbounded', sans-serif;
+    width: 520px;
+    height: 90px;
+    font-size: 26px;
+    font-weight: 700;
+    border: 1px solid #fff;
+    background: #151516;
+    border-radius: 50px;
+    color: #00AE81;
+    float: left;
+    margin-left: -130px;
+    margin-top: 40px;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+body .forms .thirteen:hover {
+    background: #151516;
+    color: #fff;
+    border: 1px #00AE81 solid;
+}
+
+/* ПОДВАЛ */
+
+body .podval {
+    color: #848484;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+body .podval .designed {
+    margin-top: 0px;
+    float: left;
+    margin-left: 70px;
+    width: 257px;
+}
+
+body .podval .c {
+    margin-left: 630px;
+}
+
+body .podval .num {
+    margin-top: 0px;
+    float: right;
+    width: 257px;
+}
+body .podval .mail {
+    margin-top: 25px;
+    margin-right: -230px;
+    float: right;
+    width: 257px;
+    margin-bottom: 50px;
+}
