@@ -39,11 +39,6 @@ function calculatePixelCount() {
     // Вычисляем количество пикселей по формуле k = I / i
     const pixelCount = volumeInBits / depth;
     
-    // Проверяем, что результат является целым числом
-    if (!Number.isInteger(pixelCount)) {
-        resultElement.value = 'Некорректные данные для расчёта';
-        return;
-    }
     
     // Форматируем и выводим результат
     if (pixelCount >= 1000000) {
