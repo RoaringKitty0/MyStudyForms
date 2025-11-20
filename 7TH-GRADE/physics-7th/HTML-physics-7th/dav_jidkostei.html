@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчёт давления жидкостей/газов</title>
+    <link rel="stylesheet" href="/7TH-GRADE/physics-7th/CSS-physics-7th/dav_jidkostei.css">
+</head>
+<header>
+    <button class="line" onclick="history.back()">&larr; на главную</button>
+    <h1>MSF</h1>
+    <p>MyStudyForms. Ed-Tech продукт XXI века.</p>
+</header>
+<body>
+    <div class="name">
+        <h1>ДАВЛЕНИЕ ЖИДКОСТЕЙ/ГАЗОВ</h1>
+    </div>
+
+    <div class="calculator-form">
+    
+    <!-- Блок ввода плотности -->
+    <div class="input-group">
+        <label>ПЛОТНОСТЬ ЖИДКОСТИ/ГАЗА</label>
+        <div class="input-with-units">
+            <input type="number" id="densityInput" placeholder="Введите плотность" step="0.001">
+            <select id="densityUnit">
+                <option value="kg_m3">кг/м³</option>
+                <option value="g_cm3">г/см³</option>
+                <option value="g_l">г/л</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Блок ввода высоты -->
+    <div class="input-group">
+        <label>ВЫСОТА СТОЛБА ЖИДКОСТИ</label>
+        <div class="input-with-units">
+            <input type="number" id="heightInput" placeholder="Введите высоту" step="0.001">
+            <select id="heightUnit">
+                <option value="m">м</option>
+                <option value="cm">см</option>
+                <option value="mm">мм</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Блок ускорения свободного падения -->
+    <div class="input-group">
+        <label>УСКОРЕНИЕ СВОБОДНОГО ПАДЕНИЯ</label>
+        <div class="input-with-units">
+            <input type="number" id="gravityInput" placeholder="10" value="10" step="0.1" readonly>
+            <select id="gravityUnit">
+                <option value="m_s2">м/с²</option>
+            </select>
+        </div>
+        <p style="font-size: 12px; color: #888; margin-top: 5px;">*стандартное значение для Земли</p>
+    </div>
+
+    <button onclick="calculatePressure()" class="calculate-btn">рассчитать</button>
+
+    <!-- Блок результата -->
+    <div class="result-group">
+        <label>ДАВЛЕНИЕ</label>
+        <div class="result-with-units">
+            <input type="text" id="pressureResult" readonly placeholder="Результат">
+            <select id="pressureUnit">
+                <option value="Pa">Па (Паскаль)</option>
+                <option value="kPa">кПа</option>
+                <option value="MPa">МПа</option>
+            </select>
+        </div>
+        <p>Пожалуйста, убедитесь, что все введённые данные и выбранные единицы измерения корректны для Вашей задачи.</p>
+    </div>
+</div>
+
+<div class="formula-explanation">
+    <p class="formula">p = ρ × g × h</p>
+    <ul>
+        <li><strong>p</strong> — давление жидкости/газа</li>
+        <li><strong>ρ</strong> — плотность жидкости/газа</li>
+        <li><strong>g</strong> — ускорение свободного падения (≈10 м/с²)</li>
+        <li><strong>h</strong> — высота столба жидкости</li>
+    </ul>
+</div>
+
+<script src="/7TH-GRADE/physics-7th/JS-physics-7th/dav_jidkostei.js"></script>
+</body>
+</html>

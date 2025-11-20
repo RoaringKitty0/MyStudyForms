@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Количество пикселей в изображении</title>
+    <link rel="stylesheet" href="/7TH-GRADE/computer_science-7th/CSS-computer_science-7th/pixels.css">
+</head>
+<header>
+    <button class="line" onclick="history.back()">&larr; на главную</button>
+    <h1>MSF</h1>
+    <p>MyStudyForms. Ed-Tech продукт XXI века.</p>
+</header>
+<body>
+    <div class="name">
+        <h1>КОЛИЧЕСТВО ПИКСЕЛЕЙ В ИЗОБРАЖЕНИИ</h1>
+    </div>
+
+    <div class="calculator-form">
+    
+    <!-- Блок ввода объёма файла -->
+    <div class="input-group">
+        <label>ОБЪЁМ ФАЙЛА (I)</label>
+        <div class="input-with-units">
+            <input type="number" id="volumeInput" placeholder="Введите объём файла" step="0.001">
+            <select id="volumeUnit">
+                <option value="bit">бит</option>
+                <option value="byte">байт</option>
+                <option value="kb">Кбайт</option>
+                <option value="mb">Мбайт</option>
+                <option value="gb">Гбайт</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Блок ввода глубины цвета -->
+    <div class="input-group">
+        <label>ГЛУБИНА ЦВЕТА (i)</label>
+        <div class="input-with-units">
+            <input type="number" id="depthInput" placeholder="Введите глубину цвета" step="1">
+            <span class="unit-static">бит</span>
+        </div>
+    </div>
+
+    <button onclick="calculatePixelCount()" class="calculate-btn">рассчитать</button>
+
+    <!-- Блок результата -->
+    <div class="result-group">
+        <label>КОЛИЧЕСТВО ПИКСЕЛЕЙ</label>
+        <div class="result-with-units">
+            <input type="text" id="pixelResult" readonly placeholder="Результат">
+            <span class="unit-static">пикселей</span>
+        </div>
+        <p>Пожалуйста, убедитесь, что все введённые данные корректны для Вашей задачи.</p>
+    </div>
+</div>
+
+<div class="formula-explanation">
+    <p class="formula">k = I ÷ i</p>
+    <ul>
+        <li><strong>k</strong> — количество пикселей в изображении</li>
+        <li><strong>I</strong> — информационный объём файла</li>
+        <li><strong>i</strong> — глубина цвета (количество бит на пиксель)</li>
+    </ul>
+    <div class="common-values">
+        <h3>Распространённые значения глубины цвета:</h3>
+        <div class="values-grid">
+            <div class="value-item">
+                <span class="depth">1 бит</span>
+                <span class="desc">Чёрно-белое</span>
+            </div>
+            <div class="value-item">
+                <span class="depth">4 бита</span>
+                <span class="desc">16 цветов</span>
+            </div>
+            <div class="value-item">
+                <span class="depth">8 бит</span>
+                <span class="desc">256 цветов</span>
+            </div>
+            <div class="value-item">
+                <span class="depth">16 бит</span>
+                <span class="desc">65 536 цветов</span>
+            </div>
+            <div class="value-item">
+                <span class="depth">24 бита</span>
+                <span class="desc">16.7 млн цветов</span>
+            </div>
+            <div class="value-item">
+                <span class="depth">32 бита</span>
+                <span class="desc">4.3 млрд цветов</span>
+            </div>
+        </div>
+    </div>
+    <div class="info-tip">
+        💡 <strong>Справка:</strong> 1 байт = 8 бит, 1 Кбайт = 1024 байта. Разрешение изображения можно найти как √k (квадратный корень из количества пикселей).
+    </div>
+</div>
+
+<script src="/7TH-GRADE/computer_science-7th/JS-computer_science-7th/pixels.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Площадь треугольника</title>
+    <link rel="stylesheet" href="/7TH-GRADE/geometry-7th/CSS-geometry-7th/triangle.css">
+</head>
+<header>
+    <button class="line" onclick="history.back()">&larr; на главную</button>
+    <h1>MSF</h1>
+    <p>MyStudyForms. Ed-Tech продукт XXI века.</p>
+</header>
+<body>
+    <div class="name">
+        <h1>ПЛОЩАДЬ ТРЕУГОЛЬНИКА</h1>
+    </div>
+
+    <div class="calculator-form">
+    
+    <!-- Блок ввода основания -->
+    <div class="input-group">
+        <label>ОСНОВАНИЕ ТРЕУГОЛЬНИКА</label>
+        <div class="input-with-units">
+            <input type="number" id="baseInput" placeholder="Введите основание" step="0.001">
+            <select id="baseUnit">
+                <option value="m">м</option>
+                <option value="cm">см</option>
+                <option value="mm">мм</option>
+                <option value="km">км</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Блок ввода высоты -->
+    <div class="input-group">
+        <label>ВЫСОТА ТРЕУГОЛЬНИКА</label>
+        <div class="input-with-units">
+            <input type="number" id="heightInput" placeholder="Введите высоту" step="0.001">
+            <select id="heightUnit">
+                <option value="m">м</option>
+                <option value="cm">см</option>
+                <option value="mm">мм</option>
+                <option value="km">км</option>
+            </select>
+        </div>
+    </div>
+
+    <button onclick="calculateTriangleArea()" class="calculate-btn">рассчитать</button>
+
+    <!-- Блок результата -->
+    <div class="result-group">
+        <label>ПЛОЩАДЬ ТРЕУГОЛЬНИКА</label>
+        <div class="result-with-units">
+            <input type="text" id="areaResult" readonly placeholder="Результат">
+            <select id="areaUnit">
+                <option value="m2">м²</option>
+                <option value="cm2">см²</option>
+                <option value="mm2">мм²</option>
+                <option value="km2">км²</option>
+            </select>
+        </div>
+        <p>Пожалуйста, убедитесь, что все введённые данные и выбранные единицы измерения корректны для Вашей задачи.</p>
+    </div>
+</div>
+
+<div class="formula-explanation">
+    <p class="formula">S = (a × h) ÷ 2</p>
+    <ul>
+        <li><strong>S</strong> — площадь треугольника</li>
+        <li><strong>a</strong> — основание треугольника</li>
+        <li><strong>h</strong> — высота треугольника</li>
+    </ul>
+</div>
+
+<script src="/7TH-GRADE/geometry-7th/JS-geometry-7th/triangle.js"></script>
+</body>
+</html>
